@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Apoio Xikorox</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <section id="main" class="flex">
+
+        <div id="cardXiko" class="flex">
+
+            <p> XIKOROX </p>
+
+
+            <div id="xikoLogoCard" class="flex">
+
+                <div id="xikoLogo">
+
+                </div>
+
+                <div id="conversation" class="flex">
+                    <h3> Ajude a comprar o jantar do Xiko </h3>
+                    <p> Faça uma doação de qualquer valor e me alimente. Toda ajuda é bem vinda :) </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="pixContent" class="flex">
+
+            <h1>Use o QR Code do Pix para pagar</h1>
+
+            <p>
+                Abra o app em que vai fazer a transferência,
+                escaneie a imagem ou cole o código do QR Code
+            </p>
+
+            <div id="pixImg"></div>
+
+            <a id="codigo">Copiar código do QR Code</a>
+
+            <a href="https://nubank.com.br/pagar/285vm/VM6bOEexR0" target="_blank">
+                Acessar o Link de Pagamento
+            </a>
+
+            <a id="chave">Copiar chave do pix</a>
+
+        </div>
+
+
+    </section>
+
+    <script>
+        
+        const codigo = $("#codigo");
+        const chave = $('#chave');
+
+        codigo.on("click", () => {
+            navigator.clipboard.writeText("00020126580014BR.GOV.BCB.PIX0136e90e7d16-7034-4080-8b82-7337f0b44e425204000053039865802BR5925Guilherme Leiria de Holan6009SAO PAULO61080540900062240520LHkBrdpZegfjlgL285vm6304401E");
+            copied()
+        })
+
+        chave.on("click", () => {
+            navigator.clipboard.writeText("e90e7d16-7034-4080-8b82-7337f0b44e42");
+            copied()
+        })
+        
+        function copied(){
+            alert("Copiado com sucesso")
+        }
+
+    </script>
+</body>
+
+</html>
